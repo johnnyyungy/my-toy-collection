@@ -1,77 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hype Toys Prototype</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        .form-container h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
-        }
-        .form-container label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-        .form-container input[type="text"],
-        .form-container input[type="email"],
-        .form-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        .form-container input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            border: none;
-            border-radius: 4px;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .form-container input[type="submit"]:hover {
-            background-color: #218838;
-        }
-    </style>
+<title>Hype Toys</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Sign Up</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+<header>
+	<a href="#" class="logo"><img src="images/logo.png"></a>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+	<div class="navicons">
+		<a href="#" class="search"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect width="20" height="20"/><circle stroke="#000" stroke-width="2" stroke-linecap="round" cx="8.8" cy="8" r="6.4"/><line x1="12.8" y1="12.8" x2="18.4" y2="18.4" stroke="#000" stroke-width="4"/></g></svg></a>
 
-            <input type="submit" value="Sign Up">
-        </form>
-    </div>
+		<a href="#" class="bag"><svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path d="M16.9881149 4.37771484C16.9695283 4.16442628 16.7683975 4 16.5265137 4L.474001809 4C.233664477 4 .0336220243 4.1621236.0129447657 4.37404574.00569913359 4.44621314 0 4.51881071 0 4.5928L0 14.3870949C0 15.8280389 1.32689577 17 2.95722028 17L14.0428084 17C15.6731042 17 17 15.8280642 17 14.3870949L17 4.5928C17 4.52020243 16.9943295 4.44849051 16.9881149 4.37771484ZM16.0737046 14.3870949C16.0737046 15.3768156 15.1623874 16.181563 14.0428084 16.181563L2.95722028 16.181563C1.8376126 16.181563.926295361 15.3768156.926295361 14.3870949L.926295361 4.81841168 16.0737046 4.81841168 16.0737046 14.3870949 16.0737046 14.3870949ZM5.48462243 3C5.49263953 3 5.50071601 3 5.50816893 2.99962186 5.77344567 2.99052561 5.97764402 2.83126759 5.96478698 2.64396454 5.91282433 1.8818327 6.32116165 1.27669006 7.11541813.939981523 7.94337609.588861824 9.05706923.588861824 9.88511627.939981523 10.6787789 1.27629092 11.0877101 1.88143356 11.0352129 2.64396454 11.0228904 2.83126759 11.2270887 2.99052561 11.4918013 2.99962186 11.7528022 3.00682744 11.9816457 2.86427041 11.9945325 2.67658922 12.0636576 1.66724088 11.4746685.821709182 10.3786723.356833759 9.25485391-.11900759 7.74568049-.11900759 6.62183237.357211894 5.52533145.821688175 4.93634228 1.66721987 5.00546744 2.67658922 5.01781971 2.85857737 5.23006485 3 5.48462243 3Z"/></svg></a>	
+
+		<button onclick="myFunction()" class="menu"><svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M20.1923077 1.625.807692308 1.625C.361616164 1.625 0 1.26123136 0 .8125 0 .363768641.361616164 0 .807692308 0L20.1923077 0C20.6383838 0 21 .363768641 21 .8125 21 1.26123136 20.6383838 1.625 20.1923077 1.625ZM20.1923077 7.3125.807692308 7.3125C.361616164 7.3125 0 6.94873136 0 6.5 0 6.05126864.361616164 5.6875.807692308 5.6875L20.1923077 5.6875C20.6383838 5.6875 21 6.05126864 21 6.5 21 6.94873136 20.6383838 7.3125 20.1923077 7.3125ZM20.1923077 13 .807692308 13C.361616164 13 0 12.6362314 0 12.1875 0 11.7387686.361616164 11.375.807692308 11.375L20.1923077 11.375C20.6383838 11.375 21 11.7387686 21 12.1875 21 12.6362314 20.6383838 13 20.1923077 13Z" transform="translate(2 6)" fill="#000" fill-rule="nonzero"/><rect width="25" height="25"/></g></svg></button>		
+	</div>
+
+</header>
+
+<div class="popupmenu" id="mymenu">
+	<a href="">About Us</a>
+	<a href="">FAQs</a>
+	<a href="">Contact Us</a>
+	<a href="">News</a>
+
+</div>
+
+<div class="banner">
+	<div class="slide">
+		<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+				  <!-- Full-width images with number and caption text -->
+				  <div class="mySlides fade">
+				    <div class="numbertext">1 / 3</div>
+				    <a href="#"><img src="images/galactus.png" style="width:100%"></a>
+				  </div>
+
+				  <div class="mySlides fade">
+				    <div class="numbertext">2 / 3</div>
+				    <a href="#"><img src="images/unicron.png" style="width:100%"></a>
+				  </div>
+
+				  <div class="mySlides fade">
+				    <div class="numbertext">3 / 3</div>
+				    <a href="#"><img src="images/sentinel.png" style="width:100%"></a>
+				  </div>
+
+				  <!-- Next and previous buttons -->
+				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+				
+				<!-- The dots/circles -->
+				<div style="text-align:center" class="dots">
+				  <span class="dot" onclick="currentSlide(1)"></span>
+				  <span class="dot" onclick="currentSlide(2)"></span>
+				  <span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+
+	</div>
+
+</div>
+
+<nav>
+	<a href="">Marvel</a> 
+	<a href="">Transformers</a>
+	<a href="">Power Rangers</a>
+	<a href="">Star Wars</a>
+	<a href="">TMNT</a>
+	<a href="">Lego</a>
+</nav>
+
+<section class="products">
+	
+<div class="pod">
+	<div class="prodpic"><img src="images/runamuck.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>WFC-E37<br>Runamuck<br><b>&pound;32.99</b></p>
+
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/runabout.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>WFC-E41<br>Runabout<br><b>&pound;149.99</b></p>
+
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/starscream.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>WFC-S60<br>Starscream<br><b>&pound;69.99</b></p>
+
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/ultramag.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>WFC-E53<br>Ultra Magnus<br><b>&pound;149.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/scourge.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>Studio 86<br>Scourge<br><b>&pound;79.99</b></p>
+
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/rodimus.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>Studio 86<br>Rodimus Prime<br><b>&pound;169.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/rainmakers.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>WFC-S88<br>Rainmakers<br><b>&pound;199.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/megbeast.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>WFC-E45<br>Megatron<br><b>&pound;149.99</b></p>
+
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/hotrod.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>Studio 86<br>Hot Rod<br><b>&pound;89.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/grimlock.png"></div>
+
+	<div class="prodinfo">
+		<p>Transformers<br>Studio 86<br>Grimlock<br><b>&pound;149.99</b></p>
+
+	</div>
+
+</div>
+
+
+<div class="pod">
+	<div class="prodpic"><img src="images/zeogreen.png"></div>
+
+	<div class="prodinfo">
+		<p>Mighty Morphin Power Rangers<br>Zeo Green Ranger<br><b>&pound;49.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/greenranger.png"></div>
+
+	<div class="prodinfo">
+		<p>Bandai Mighty Morphin Power Rangers<br>Legacy Green Ranger<br><b>&pound;99.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/whiteranger.png"></div>
+
+	<div class="prodinfo">
+		<p>Bandai Mighty Morphin Power Rangers<br>Legacy White Ranger<br><b>&pound;149.99</b></p>
+	</div>
+
+</div>
+<div class="pod">
+	<div class="prodpic"><img src="images/goldranger.png"></div>
+
+	<div class="prodinfo">
+		<p>Mighty Morphin Power Rangers<br>Lightning Gold Ranger<br><b>&pound;49.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/drakkonv3.png"></div>
+
+	<div class="prodinfo">
+		<p>Mighty Morphin Power Rangers<br>Lord Drakkon V3<br><b>&pound;149.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/drakkon.png"></div>
+
+	<div class="prodinfo">
+		<p>Mighty Morphin Power Rangers<br>Lightning Lord Drakon<br><b>&pound;59.99</b></p>
+	</div>
+
+</div>
+<div class="pod">
+	<div class="prodpic"><img src="images/vintageboba.png"></div>
+
+	<div class="prodinfo">
+		<p>Star Wars Vintage Collection<br>Boba Fett<br><b>&pound;49.99</b></p>
+
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/vader.png"></div>
+
+	<div class="prodinfo">
+		<p>Star Wars Vintage Collection<br>Darth Vader<br><b>&pound;69.99</b></p>
+	</div>
+
+</div>
+
+
+
+<div class="pod">
+	<div class="prodpic"><img src="images/lego-spiderman.png"></div>
+
+	<div class="prodinfo">
+		<p>Lego<br>Spiderman Street Scene<br><b>&pound;99.99</b></p>
+	</div>
+
+</div>
+
+<div class="pod">
+	<div class="prodpic"><img src="images/michaelangelo.png"></div>
+
+	<div class="prodinfo">
+		<p>Teenage Mutant Ninja Turtles<br>Michaelangelo<br><b>&pound;29.99</b></p>
+	</div>
+
+</div>
+
+
+
+</section>
+
+
+<section class="logos">
+	<a href=""><img src="images/marvel.png"></a> 
+	<a href=""><img src="images/trans.png"></a>
+	<a href=""><img src="images/MMPR.png"></a>
+	<a href=""><img src="images/starwars.png"></a>
+	<a href=""><img src="images/tmnt.png"></a>
+	<a href=""><img src="images/lego.png"></a>
+</section>
+
+<footer>
+	<div class="socialmedia">
+		<a href=""><img src="images/instagram.png" width="35" height="35"></a>
+		<a href=""><img src="images/twitter.png" width="35" height="35"></a>
+		<a href=""><img src="images/youtube.png" width="35" height="35"></a>
+		<a href=""><img src="images/facebook.png" width="35" height="35"></a>
+	</div>
+
+	<div class="copyright">All work &copy; John Yung 2019 - 2021 - All Rights Reserved</div>
+</footer>
+
+
+
+<script type="text/javascript">
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+
+	function myFunction() {
+	  var element = document.getElementById("mymenu");
+	  element.classList.toggle("showNav");
+	}
+</script>
+
+
+
 </body>
 </html>
