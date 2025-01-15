@@ -314,19 +314,18 @@ footer {
 }
 
 .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    min-height: 50px; 
-    margin-bottom: 20px;
-    overflow-x: scroll;
-    white-space: nowrap;
+	display: flex;
+	justify-content: center;
+	min-height: 50px;
+	margin-bottom: 20px;
+	overflow-x: scroll;
+	white-space: nowrap;
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-.logos img {
-    height: 50px; 
-    width: auto; 
-    margin: 0 10px; 
+.logos img{
+	height: 50px;
 }
 
 .logos a{
