@@ -319,7 +319,7 @@ footer {
     align-items: center; 
     min-height: 50px; 
     margin-bottom: 20px;
-    overflow: hidden; 
+    overflow-x: scroll;
     white-space: nowrap;
 }
 
