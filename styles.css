@@ -1,13 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0px;
     margin: 0px;
     font-family: helvetica, arial, sans-serif;
     min-width: 320px;
     padding-bottom: 100px; 
-}
-
-* {
-    box-sizing: border-box;
 }
 
 header {
