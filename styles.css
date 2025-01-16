@@ -3,7 +3,7 @@ body {
     margin: 0px;
     font-family: helvetica, arial, sans-serif;
     min-width: 320px;
-    padding-bottom: 100px; /* Add padding for fixed footer */
+    padding-bottom: 100px; 
 }
 
 * {
