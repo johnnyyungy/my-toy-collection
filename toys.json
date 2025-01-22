@@ -1,0 +1,58 @@
+{
+    "toys": [
+        {
+            "category": "Transformers",
+            "name": "Runamuck",
+            "code": "WFC-E37",
+            "image": "images/runamuck.png"
+        },
+        {
+            "category": "Transformers",
+            "name": "Runabout",
+            "code": "WFC-E41",
+            "image": "images/runabout.png"
+        },
+        {
+            "category": "Transformers",
+            "name": "Starscream",
+            "code": "WFC-S60",
+            "image": "images/starscream.png"
+        },
+        {
+            "category": "Power Rangers",
+            "name": "Zeo Green Ranger",
+            "code": "",
+            "image": "images/zeogreen.png"
+        },
+        {
+            "category": "Power Rangers",
+            "name": "Legacy Green Ranger",
+            "code": "",
+            "image": "images/greenranger.png"
+        },
+        {
+            "category": "Star Wars",
+            "name": "Boba Fett",
+            "code": "Vintage Collection",
+            "image": "images/vintageboba.png"
+        },
+        {
+            "category": "Star Wars",
+            "name": "Darth Vader",
+            "code": "Vintage Collection",
+            "image": "images/vader.png"
+        },
+        {
+            "category": "Lego",
+            "name": "Spiderman Street Scene",
+            "code": "",
+            "image": "images/lego-spiderman.png"
+        },
+        {
+            "category": "TMNT",
+            "name": "Michaelangelo",
+            "code": "",
+            "image": "images/michaelangelo.png"
+        }
+    ]
+}
