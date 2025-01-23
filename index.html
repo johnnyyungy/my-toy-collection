@@ -94,17 +94,36 @@
         }
 
         function filterToys() {
-            const searchTerm = document.getElementById('search').value.toLowerCase();
-            const toys = document.querySelectorAll('.pod');
+  const searchTerm = document.getElementById('search').value.toLowerCase();
+  const categories = document.querySelectorAll('.category');
 
-            toys.forEach(toy => {
-                const toyText = toy.textContent.toLowerCase();
-                if (toyText.includes(searchTerm)) {
-                    toy.style.display = 'block';
-                } else {
-                    toy.style.display = 'none';
-                }
-            });
+  categories.forEach(category => {
+    const categoryName = category.querySelector('h2').textContent.toLowerCase();
+    const toys = category.querySelectorAll('.pod');
+    let hasMatchingToys = false;
+
+    // Check each toy in the category
+    toys.forEach(toy => {
+      const toyText = toy.textContent.toLowerCase();
+      if (toyText.includes(searchTerm)) {
+        toy.style.display = 'block'; // Show matching toys
+        hasMatchingToys = true;
+      } else {
+        toy.style.display = 'none'; // Hide non-matching toys
+      }
+    });
+
+    // Show/hide the category based on whether it has matching toys
+    if (hasMatchingToys || categoryName.includes(searchTerm)) {
+      category.style.display = 'block'; // Show the category
+    } else {
+      category.style.display = 'none'; // Hide the category
+    }
+  });
+}
+
+// Add event listener for the search input
+document.getElementById('search').addEventListener('input', filterToys);
         }
 
         document.addEventListener('DOMContentLoaded', loadToys);
